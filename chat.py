@@ -1,27 +1,38 @@
-from App import *
+from mensagem import *
 import sqlite3
 
+class Mensagem ():
+    def __init__(self, id, idUsuario, idRemetente):
+        self.id = id
+        self.idUsuario = idUsuario
+        self.idRemetente = idRemetente
 
-conn = sqlite3.connect("novacon.db")
+    def inserir():
+        conn = sqlite3.connect("novacon.db")
+        cursor= conn.cursor()
+        cursor.execute("""
+            INSERT INTO tb.chat (idUsuario, idRemetente)
+            VALUES (self.idUsuario,self.idRemetente)
+            """)
 
-cursor= conn.cursor()
+    def listar(Mensagem):
+        return Mensagem
 
-cursor.execute("""
-INSERT INTO tb.chat (idUsuario, idRemetente, id)
-VALUES ("455423", "45725", "65675")
-""")
+    def deletar(self, id):
+        novo_id = 8
+        conn = sqlite3.connect("novacon.db")
+        cursor = conn.cursor()
+        cursor.execute("""
+                DELETE FROM tb.chat
+                WHERE id=?""", (novo_id,))
+        conn.commit()
+        conn.close()
 
-cursor.execute("""SELECT * FROM tb.chat """, (tb.chat))
-
-cursor.execute("""
-UPDATE tb.chat
-SET id=?
-WHERE id=?
-""", ())
-
-cursor.execute("""
-DELETE FROM tb.chat
-WHERE id=?""", ())
-
-conn.commit()
-conn.close()
+    def atualizar(self, idUsuario, idRemetente):
+        conn = sqlite3.connect("novacon.db")
+        cursor = conn.cursor()
+        cursor.execute("""UPDATE tb.chat
+            SET * VALUES(?,?,?,?,?,?,?)
+            WHERE id = ?""", ())
+        conn.commit()
+        conn.close()
