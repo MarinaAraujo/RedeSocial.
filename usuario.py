@@ -1,4 +1,4 @@
-from App import *
+#from App import *
 import sqlite3
 
 class Usuario():
@@ -24,36 +24,35 @@ class Usuario():
 
     def listar(self):
         usuarios = []
-            conn = sqlite3.connect("novacon.db")
-            cursor= conn.cursor()
-            cursor.execute("""SELECT * FROM tb.usuario """, (tb.usuario))
+        conn = sqlite3.connect("novacon.db")
+        cursor= conn.cursor()
+        cursor.execute("""SELECT * FROM tb.usuario """, (tb.usuario))
 
-            for linha in cursor.fetchall:
-                nome = linha[1]
-                email=linha[2]
-                senha=linha[3]
-                idade=linha[4]
-                telefone=linha[5]
-                profissao=linha[6]
-                usuario = Usuario(nome, email, senha, profissao, sexo, data_nasc)
-                usuarios.append(usuario)
+        for linha in cursor.fetchall:
+            nome = linha[1]
+            email=linha[2]
+            senha=linha[3]
+            idade=linha[4]
+            telefone=linha[5]
+            profissao=linha[6]
+            usuario = Usuario(nome, email, senha, profissao, sexo, data_nasc)
+            usuarios.append(usuario)
         conn.close()
         return usuarios
 
     def deletar(self, id):
-        pass
-
+        id_codigo = 7
+        conn = sqlite3.connect("novacon.db")
+        cursor = conn.cursor()
+        cursor.execute("""
+                DELETE FROM tb.usuario
+                WHERE codigo = ?
+                """, (id_codigo,))
+        conn.commit()
+        conn.close()
     def atualizar(self, nome, email, senha, profissao, sexo, data_nasc):
-        pass
-
-
-
-cursor.execute("""
-''' UPDATE tb.usuario
-SET codigo=?
-WHERE id=?
-""", ())
-
-cursor.execute("""
-DELETE FROM tb.usuario
-WHERE id=?""", ()) '''
+        conn = sqlite3.connect("novacon.db")
+        cursor= conn.cursor()
+        cursor.execute("""UPDATE tb.usuario
+        SET * VALUES(?,?,?,?,?,?,?)
+        WHERE codigo = ?""",())
