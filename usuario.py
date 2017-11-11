@@ -35,10 +35,29 @@ class Usuario():
             idade=linha[4]
             telefone=linha[5]
             profissao=linha[6]
-            usuario = Usuario(nome, email, senha, profissao, sexo, data_nasc)
+            usuario = Usuario(nome, email, senha, idade, telefone, profissao)
             usuarios.append(usuario)
         conn.close()
         return usuarios
+
+    def deletar(self, codigo):
+        id_codigo = 7
+        conn = sqlite3.connect("novacon.db")
+        cursor = conn.cursor()
+        cursor.execute("""
+                DELETE FROM tb.usuario
+                WHERE codigo = ?
+                """, (id_codigo,))
+        conn.commit()
+        conn.close()
+    def atualizar(self, nome, email, senha, idade, telefone, profissao):
+        conn = sqlite3.connect("novacon.db")
+        cursor= conn.cursor()
+        cursor.execute("""UPDATE tb.usuario
+        SET * VALUES(?,?,?,?,?,?,?)
+        WHERE codigo = ?""",())
+        conn.commit()
+        conn.close()
 
     def deletar(self, id):
         id_codigo = 7
