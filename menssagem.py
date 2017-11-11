@@ -1,27 +1,50 @@
-from App import *
+#from App import *
 import sqlite3
 
+class Mensagem ():
+    def __init__(self, id, idRemetente, coments):
+        self.id = id
+        self.idRemetente = idRemetente
+        self.coments = coments
 
-conn = sqlite3.connect("novacon.db")
 
-cursor= conn.cursor()
+    def inserir():
+        conn = sqlite3.connect("novacon.db")
+        cursor= conn.cursor()
+        cursor.execute("""
+            INSERT INTO tb.mensagem (idRemetente, coments)
+            VALUES (self.idRemetente, self.coments)
+            """)
 
-cursor.execute("""
-INSERT INTO tb.menssagem (id, idRemetente, coments)
-VALUES ("45423", "45425", "aaaaaaaaaaaaaaaa")
-""")
+    def listar():
+        mensagens = []
+        conn = sqlite3.connect("novacon.db")
+        cursor = conn.cursor()
+        cursor.execute("""SELECT * FROM tb.mensagem """, (tb.mensagem))
 
-cursor.execute("""SELECT * FROM tb.menssagem """, (tb.menssagem))
+        for linha in cursor.fetchall:
+            idRemetente = linha[1]
+            coments = linha[2]
+            Mensagem = Mensagem(idRemetente, coments)
+            mensagens.append(Mensagem)
+        conn.close()
+        return mensagens
 
-cursor.execute("""
-UPDATE tb.menssagem
-SET coments=?
-WHERE id=?
-""", ())
+    def deletar(self, id):
+        novo_id = 3
+        conn = sqlite3.connect("novacon.db")
+        cursor = conn.cursor()
+        cursor.execute("""
+                DELETE FROM tb.mensagem
+                WHERE id=?""", (novo_id,))
+        conn.commit()
+        conn.close()
 
-cursor.execute("""
-DELETE FROM tb.menssagem
-WHERE coments=?""", ())
-
-conn.commit()
-conn.close()
+    def atualizar(self, idRemetente, coments):
+        conn = sqlite3.connect("novacon.db")
+        cursor = conn.cursor()
+        cursor.execute("""UPDATE tb.mensagem
+            SET * VALUES(?,?,?,?,?,?,?)
+            WHERE id = ?""", ())
+        conn.commit()
+        conn.close()
