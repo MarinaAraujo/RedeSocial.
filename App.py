@@ -1,4 +1,9 @@
 import sqlite3
+from Usuario inport Usuario
+from Chat inport Chat
+from Comenttario inport Comentario
+from Mensagem inport Mensagem
+from Publicacao inport Publicacao
 
 conn = sqlite3.connect("novacon.db")
 
@@ -52,6 +57,8 @@ cursor.execute(""" CREATE TABLE tb.chat(
     id INTEGER,
 );""")
 conn.close()
+
+
 
 
 
