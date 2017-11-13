@@ -1,7 +1,7 @@
 from mensagem import *
 import sqlite3
 
-class Mensagem ():
+class Chat ():
     def __init__(self, id, idUsuario, idRemetente):
         self.id = id
         self.idUsuario = idUsuario
