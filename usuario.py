@@ -69,9 +69,4 @@ class Usuario():
                 """, (id_codigo,))
         conn.commit()
         conn.close()
-    def atualizar(self, nome, email, senha, profissao, sexo, data_nasc):
-        conn = sqlite3.connect("novacon.db")
-        cursor= conn.cursor()
-        cursor.execute("""UPDATE tb.usuario
-        SET * VALUES(?,?,?,?,?,?,?)
-        WHERE codigo = ?""",())
+    
