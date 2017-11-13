@@ -1,9 +1,9 @@
 import sqlite3
-from Usuario inport Usuario
-from Chat inport Chat
-from Comenttario inport Comentario
-from Mensagem inport Mensagem
-from Publicacao inport Publicacao
+from Usuario import Usuario
+from Chat import Chat
+from Comenttario import Comentario
+from Mensagem import Mensagem
+from Publicacao import Publicacao
 
 conn = sqlite3.connect("novacon.db")
 
