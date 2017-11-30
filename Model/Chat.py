@@ -1,4 +1,4 @@
-from mensagem import *
+from Model.Mensagem import Mensagem
 import sqlite3
 
 class Chat ():
