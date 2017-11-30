@@ -1,7 +1,7 @@
 import sqlite3
 from Model.Usuario import Usuario
 from Model.Chat import Chat
-from Model.Comenttario import Comentario
+from Model.Comentario import Comentario
 from Model.Mensagem import Mensagem
 from Model.Publicacao import Publicacao
 
@@ -59,10 +59,22 @@ cursor.execute(""" CREATE TABLE tb.chat(
 conn.close()
 
 def logIn():
-   pass
+   def logar(conn):
+    cursor = conn.cursor()
 
-def verifExist(nick):
-    pass
+    email = input("Digite seu email:\n ")
+    senha = input("Digite sua senha:\n ")
+
+    cursor.execute("""
+        Select * From tb_Usuario where email = ? and senha = ?;
+    """, (email, senha))
+    usuario = cursor.fetchone()
+    print(usuario)
+
+    if (usuario == None):
+        return (False, "NADA")
+    else:
+        return (True, usuario)
 
 def validarEmail(email):
     if ((email.find('@')>0) and(len(email)>9)):
