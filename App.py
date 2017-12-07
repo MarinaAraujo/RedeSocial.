@@ -1,11 +1,22 @@
-import sqlite3
+import mysql.connect
 from Model.Usuario import Usuario
 from Model.Chat import Chat
 from Model.Comentario import Comentario
 from Model.Mensagem import Mensagem
 from Model.Publicacao import Publicacao
 
-conn = sqlite3.connect("novacon.db")
+try:
+    # conectando ao banco :3
+    conn = mysql.connector.connect(user='root',
+                              password='ifpbinfo',
+                              host='127.0.0.1',
+                              database='Novacondb')
+
+except mysql.connector.Error as err:
+    print("erro na base de dados")
+else:
+    # encerrando conexão por precaução
+    conn.close()
 
 cursor= conn.cursor()
 
