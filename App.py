@@ -19,62 +19,65 @@ else:
     # encerrando conexão por precaução
     conn.close()
 
-cursor= conn.cursor()
-
-cursor.execute(""" CREATE TABLE tb.usuario(
-    codigo INTEGER PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL UNIQUE,
-    email VARCHAR(40) NOT NULL UNIQUE,
-    senha INTEGER NOT NULL,
-    idade INTEGER,
-    telefone INTEGER,
-    profissao VARCHAR(70)
-);""")
-
-cursor.execute("""CREATE TABLE tb.publicacao(
-    idRemetente INTEGER NOT NULL,
-    idPublicacao INTEGER NOT NULL,
-    horario INTEGER NOT NULL,
-    texto TEXT,
-    publico VARCHAR(15),
-    nToploose INTEGER NOT NULL,
-    nXonei  INTEGER NOT NULL,
-    nHu3 INTEGER NOT NULL,
-    nExasperado INTEGER NOT NULL
-    nSad INTEGER NOT NULL
-);""")
-
-cursor.execute("""CREATE TABLE tb.comentario(
-    codigo INTEGER,
-    idRemetente INTEGER NOT NULL,
-    idPublicacao INTEGER NOT NULL,
-    horario INTEGER NOT NULL,
-    texto TEXT,
-    nToploose INTEGER NOT NULL,
-    nXonei  INTEGER NOT NULL,
-    nHu3 INTEGER NOT NULL,
-    nExasperado INTEGER NOT NULL
-    nSad INTEGER NOT NULL
-); """)
-
-cursor.execute(""" CREATE TABLE tb.menssagem(
-    id INTEGER,
-    idRemetente INTEGER,
-    coments TEXT
-);""")
-
-cursor.execute(""" CREATE TABLE tb.chat(
-    idUsuario INTEGER,
-    idRemetente INTEGER,
-    id INTEGER,
-);""")
-conn.close()
 
 
 def criarRedeSocial():
     nome = str(input("Digite um nome da Rede Social: "))
     redeSocial = RedeSocial(nome)
     idRedeSocial = redeSocial.inserirRedeSocial(redeSocial)
+    
+        cursor= conn.cursor()
+
+    cursor.execute(""" CREATE TABLE tb.usuario(
+        codigo INTEGER PRIMARY KEY AUTOCOMPLETE,
+        nome VARCHAR(50) NOT NULL UNIQUE,
+        email VARCHAR(40) NOT NULL UNIQUE,
+        senha INTEGER NOT NULL,
+        idade INTEGER,
+        telefone INTEGER,
+        profissao VARCHAR(70)
+    );""")
+
+    cursor.execute("""CREATE TABLE tb.publicacao(
+        idRemetente INTEGER NOT NULL,
+        idPublicacao INTEGER NOT NULL,
+        horario INTEGER NOT NULL,
+        texto TEXT,
+        publico VARCHAR(15),
+        nToploose INTEGER NOT NULL,
+        nXonei  INTEGER NOT NULL,
+        nHu3 INTEGER NOT NULL,
+        nExasperado INTEGER NOT NULL
+        nSad INTEGER NOT NULL
+    );""")
+
+    cursor.execute("""CREATE TABLE tb.comentario(
+        codigo INTEGER,
+        idRemetente INTEGER NOT NULL,
+        idPublicacao INTEGER NOT NULL,
+        horario INTEGER NOT NULL,
+        texto TEXT,
+        nToploose INTEGER NOT NULL,
+        nXonei  INTEGER NOT NULL,
+        nHu3 INTEGER NOT NULL,
+        nExasperado INTEGER NOT NULL
+        nSad INTEGER NOT NULL
+    ); """)
+
+    cursor.execute(""" CREATE TABLE tb.menssagem(
+        id INTEGER,
+        idRemetente INTEGER,
+        coments TEXT
+    );""")
+
+    cursor.execute(""" CREATE TABLE tb.chat(
+        idUsuario INTEGER,
+        idRemetente INTEGER,
+        id INTEGER,
+    );""")
+    conn.close()
+
+    
 def logIn():
    def logar(conn):
     cursor = conn.cursor()
@@ -100,12 +103,12 @@ def validarEmail(email):
         return(0)
 
 def signIn():
-    NovoUsuario = Usuario
+    NovoUsuario = Usuario('','',0,0,0,'')
     NovoUsuario.nome = input('Digite o nome de usuário')
     NovoUsuario.email = input('Digie seu E-mail')
     if validarEmail(NovoUsuario.email) == 0:
         NovoUsuario.email = input('Email inválido, digite novamente')
-    senha1 = input('Qual será sua senha? Remonmendamos uma senha com mais de 8 dígitos mesclando letras e numeros ')
+    senha1 = input('Qual será sua senha? Remonmendamos uma senha com mais de 8 dígitos numeros ')
     senha2 = input('Por favor confirme sua senha')
     if senha1 == senha2:
         NovoUsuario.senha = senha1
