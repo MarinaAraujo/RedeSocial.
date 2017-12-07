@@ -4,6 +4,7 @@ from Model.Chat import Chat
 from Model.Comentario import Comentario
 from Model.Mensagem import Mensagem
 from Model.Publicacao import Publicacao
+from model.RedeSocial import RedeSocial
 
 try:
     # conectando ao banco :3
