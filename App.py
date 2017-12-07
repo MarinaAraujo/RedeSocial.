@@ -69,6 +69,11 @@ cursor.execute(""" CREATE TABLE tb.chat(
 );""")
 conn.close()
 
+
+def criarRedeSocial():
+    nome = str(input("Digite um nome da Rede Social: "))
+    redeSocial = RedeSocial(nome)
+    idRedeSocial = redeSocial.inserirRedeSocial(redeSocial)
 def logIn():
    def logar(conn):
     cursor = conn.cursor()
@@ -96,8 +101,6 @@ def validarEmail(email):
 def signIn():
     NovoUsuario = Usuario
     NovoUsuario.nome = input('Digite o nome de usuário')
-    if verifExist(NovoUsuario.nome) == 0:
-        NovoUsuario.nome = input('Nome de usuário já utilizado, tente outro')
     NovoUsuario.email = input('Digie seu E-mail')
     if validarEmail(NovoUsuario.email) == 0:
         NovoUsuario.email = input('Email inválido, digite novamente')
@@ -117,15 +120,34 @@ def signIn():
     Usuario.inserir()
 
 def menuzinho():
-    print('========================================================================================================================')
+     print('========================================================================================================================')
     print('bem vindo')
-    menu1=input('o que gostaria de fazer agora? \n 1-Realizar LogIn \n 2-Cadastrar um novo usuário')
-    if (menu1 ==1):
-        logIn()
-    elif (menu1== 2):
-        signIn()
-    else:
-        x=1
+    menu1=input('o que gostaria de fazer agora? \n 1-criar rede social\n 2-Realizar LogIn \n 3-Cadastrar um novo usuário\n 0-Sair' )
+    
+         continuar = True
+
+    while continuar:
+ 
+        try:
+          
+            opcao = int(input("Digite a opção: "))
+
+            if (opcao == 1):
+                criarRedeSocial()
+
+            elif (opcao == 2):
+                logIn()
+                
+            elif (opcao == 3):
+                signIn()   
+
+            elif (opcao == 0):
+                continuar = False
+            else:
+                print("Opção inválida!")
+
+        except ValueError:
+            print("Digite um valor válido")
 
 def Main():
     menuzinho()
