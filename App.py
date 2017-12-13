@@ -33,9 +33,9 @@ def criarRedeSocial():
     
         cursor= conn.cursor()
 
-    cursor.execute(""" CREATE TABLE tb.usuario(
-        codigo INTEGER PRIMARY KEY AUTOCOMPLETE,
-        nome VARCHAR(50) NOT NULL UNIQUE,
+    cursor.execute(""" CREATE TABLE tb_usuario(
+        codigo INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome VARCHAR(50) NOT NULL,
         email VARCHAR(40) NOT NULL UNIQUE,
         senha INTEGER NOT NULL,
         idade INTEGER,
@@ -43,7 +43,7 @@ def criarRedeSocial():
         profissao VARCHAR(70)
     );""")
 
-    cursor.execute("""CREATE TABLE tb.publicacao(
+    cursor.execute("""CREATE TABLE tb_publicacao(
         idRemetente INTEGER NOT NULL,
         idPublicacao INTEGER NOT NULL,
         horario INTEGER NOT NULL,
@@ -56,8 +56,8 @@ def criarRedeSocial():
         nSad INTEGER NOT NULL
     );""")
 
-    cursor.execute("""CREATE TABLE tb.comentario(
-        codigo INTEGER,
+    cursor.execute("""CREATE TABLE tb_comentario(
+        codigo INTEGER PRIMARY KEY AUTOINCREMENT,
         idRemetente INTEGER NOT NULL,
         idPublicacao INTEGER NOT NULL,
         horario INTEGER NOT NULL,
@@ -69,27 +69,46 @@ def criarRedeSocial():
         nSad INTEGER NOT NULL
     ); """)
 
-    cursor.execute(""" CREATE TABLE tb.menssagem(
-        id INTEGER,
+    cursor.execute(""" CREATE TABLE tb_menssagem(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
         idRemetente INTEGER,
         coments TEXT
     );""")
 
-    cursor.execute(""" CREATE TABLE tb.chat(
-        idUsuario INTEGER,
+    cursor.execute(""" CREATE TABLE tb_chat(
+        idUsuario INTEGER PRIMARY KEY AUTOINCREMENT,
         idRemetente INTEGER,
         id INTEGER,
     );""")
     
-    cursor.execute(""" CREATE TABLE tb.amigo(
-        codigo INTEGER PRIMARY KEY AUTOCOMPLETE,
-        email VARCHAR(40) NOT NULL UNIQUE,
+    cursor.execute(""" CREATE TABLE tb_contato(
+        codigo INTEGER PRIMARY KEY AUTOINCREMENT,
+        emailuser1 VARCHAR(40) NOT NULL UNIQUE,
+        emailuser2 VARCHAR(40) NOT NULL UNIQUE,
+        nomeuser2 varchar (50)
         dataAmizade DATE
     );""")
     conn.close()
 
-    
+def addcontato():
+    pesq=input('digite o nome do amigo que procura')
+    print(cursor = conn.cursor("""
+    select nome, email from tb_Usuario WHERE nome like %?%""")pesq)
+    conn.close()
+    auxemail=input('digite o email do amigo a ser adicionado')
+    cursor=conn.cursor("""
+    insert into tb_amizade values (userfeed.email, auxemail,"today")
+    """)
+    conn.close()
+
+def listarcontatos():
+    cursor=conn.cursor()
+    for i in cursor.fetchall:
+        print(cursor.execute(""" select nomeuser2 from tb_contato where codigo = ?""")i)
+
+
 def logIn():
+    print('========================================================================================================================')
    def logar(conn):
     cursor = conn.cursor()
 
@@ -105,6 +124,7 @@ def logIn():
     if (usuario == None):
         return (False, "NADA")
     else:
+        userfeed=usuario
         return (True, usuario)
 
 def validarEmail(email):
@@ -114,6 +134,7 @@ def validarEmail(email):
         return(0)
 
 def signIn():
+    print('========================================================================================================================')
     NovoUsuario = Usuario('','',0,0,0,'')
     NovoUsuario.nome = input('Digite o nome de usuário')
     NovoUsuario.email = input('Digie seu E-mail')
@@ -132,7 +153,7 @@ def signIn():
     NovoUsuario.idade = input('Digite sua idade')
     NovoUsuario.telefone = input('Digite seu Telefone')
     NovoUsuario.profissao = input('Digite sua profissão')
-    Usuario.inserir()
+    UsuarioDAO.inserir()
 
 def menuzinho():
      print('========================================================================================================================')
@@ -165,6 +186,7 @@ def menuzinho():
             print("Digite um valor válido")
 
 def Main():
+    criarRedeSocial()
     menuzinho()
 
 if __name__ == "__main__":
