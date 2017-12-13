@@ -75,6 +75,12 @@ def criarRedeSocial():
         idRemetente INTEGER,
         id INTEGER,
     );""")
+    
+    cursor.execute(""" CREATE TABLE tb.amigo(
+        codigo INTEGER PRIMARY KEY AUTOCOMPLETE,
+        email VARCHAR(40) NOT NULL UNIQUE,
+        dataAmizade DATE
+    );""")
     conn.close()
 
     
