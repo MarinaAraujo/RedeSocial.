@@ -173,6 +173,8 @@ def menuzinho():
 
             elif (opcao == 2):
                 logIn()
+                addcontato()
+                listarcontatos()
                 
             elif (opcao == 3):
                 signIn()   
