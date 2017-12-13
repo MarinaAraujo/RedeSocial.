@@ -4,7 +4,12 @@ from Model.Chat import Chat
 from Model.Comentario import Comentario
 from Model.Mensagem import Mensagem
 from Model.Publicacao import Publicacao
-from model.RedeSocial import RedeSocial
+from Model.RedeSocial import RedeSocial
+from UsuarioDAO import UsuarioDAO
+from ChatDAO import ChatDAO
+from ComentarioDAO import ComentarioDAO
+from MensagemDAO import MensagemDAO
+from PublicacaoDAO import PublicacaoDAO
 
 try:
     # conectando ao banco :3
