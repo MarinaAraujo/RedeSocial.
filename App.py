@@ -24,6 +24,7 @@ else:
     # encerrando conexão por precaução
     conn.close()
 
+userfeed = Usuario()
 
 #função para criar a rede social
 def criarRedeSocial():
@@ -91,6 +92,12 @@ def criarRedeSocial():
     );""")
     conn.close()
 
+    cursor.execute("""CREATE TABLE tb_mensagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email-remetente VARCHAR (50) not NULL),
+    email-destinatario VARCHAR (50) NOT NULL,
+    texto VARCHAR (256)""")
+
     # adicionando contatos
 def addcontato():
     pesq=input('digite o nome do amigo que procura')
@@ -108,6 +115,7 @@ def listarcontatos():
     cursor=conn.cursor()
     for i in cursor.fetchall:
         print(cursor.execute(""" select nomeuser2 from tb_contato where codigo = ?""")i)
+    conn.close
 
 #executando login do usuario
 def logIn():
@@ -137,10 +145,10 @@ def validarEmail(email):
     else:
         return(0)
 #fução para cadastar um novo usuario
-def signIn():
+def signUp():
     print('========================================================================================================================')
-    NovoUsuario = Usuario('','',0,0,0,'')
-    NovoUsuario.nome = input('Digite o nome de usuário')
+        NovoUsuario = Usuario('','',0,0,0,'')
+        NovoUsuario.nome = input('Digite o nome de usuário')
     NovoUsuario.email = input('Digie seu E-mail')
     if validarEmail(NovoUsuario.email) == 0:
         NovoUsuario.email = input('Email inválido, digite novamente')
@@ -158,7 +166,36 @@ def signIn():
     NovoUsuario.telefone = input('Digite seu Telefone')
     NovoUsuario.profissao = input('Digite sua profissão')
     UsuarioDAO.inserir()
-    
+
+def LerMensagens():
+    cursor=conn.cursor()
+    cursor.execute(("""select email_remetende,texto from tb_mensagem where email_destinatario = ?
+    """)userfeed.email)
+    print(cursor)
+    conn.close
+
+def enviarMensagem()
+    m=Mensagem()
+    m.email=input("digite o email do destinatário da mensagem")
+    m.texto=input("digite a mensagem a ser enviada")
+    MensagemDAO.inserir(m)
+
+def menu2 ():
+    menuzinho2=input('o que desseja fazer agora?')
+    print('0-sair\n1-ver amigos\n 2-adicionar amigos\n3-ler as mensagens recebidas\n 3-enviar mensagem')
+    if menuzinho2 ==1:
+        listarcontatos()
+    elif menuzinho2==2:
+        addcontato()
+    elif menuzinho2 ==3:
+        pass
+    elif menuzinho2 == 4:
+        pass
+    elif menuzinho2 == 0 :
+        break
+    else:
+        print('digite um valor valido')
+
 #criando o menu
 def menuzinho():
      print('========================================================================================================================')
@@ -178,11 +215,10 @@ def menuzinho():
 
             elif (opcao == 2):
                 logIn()
-                addcontato()
-                listarcontatos()
+                menu2()
                 
             elif (opcao == 3):
-                signIn()   
+                signUp()
 
             elif (opcao == 0):
                 continuar = False

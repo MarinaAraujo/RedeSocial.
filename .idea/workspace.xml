@@ -17,36 +17,36 @@
       <file leaf-file-name="App.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="175" column="16" lean-forward="false" selection-start-line="175" selection-start-column="16" selection-end-line="176" selection-end-column="32" />
+            <state relative-caret-position="379">
+              <caret line="182" column="13" lean-forward="true" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1513136626161" expanded="true" signature="1022:1291" ph="CREATE TABLE... usuario" />
-                <marker date="1513136626161" expanded="true" signature="1320:1681" ph="CREATE TABLE... publicacao" />
-                <marker date="1513136626161" expanded="true" signature="1710:2092" ph="CREATE TABLE... comentario" />
-                <marker date="1513136626161" expanded="true" signature="2123:2251" ph="CREATE TABLE... menssagem" />
-                <marker date="1513136626161" expanded="true" signature="2281:2410" ph="CREATE TABLE... chat" />
-                <marker date="1513136626161" expanded="true" signature="2444:2676" ph="CREATE TABLE... amigo" />
-                <marker date="1513136626161" expanded="true" signature="2810:2864" ph="select nome,... tb_Usuario" />
-                <marker date="1513136626161" expanded="true" signature="2985:3049" ph="insert into tb_amizade... " />
-                <marker date="1513136626161" expanded="true" signature="3187:3236" ph="select nomeu... tb_contato" />
-                <marker date="1513136626161" expanded="true" signature="3556:3610" ph="Select * Fro... tb_Usuario" />
+                <marker date="1513764597177" expanded="true" signature="1126:1395" ph="CREATE TABLE... tb_usuario" />
+                <marker date="1513764597177" expanded="true" signature="1424:1785" ph="CREATE TABLE... tb_publicacao" />
+                <marker date="1513764597177" expanded="true" signature="1814:2196" ph="CREATE TABLE... tb_comentario" />
+                <marker date="1513764597177" expanded="true" signature="2227:2355" ph="CREATE TABLE... tb_menssagem" />
+                <marker date="1513764597177" expanded="true" signature="2385:2514" ph="CREATE TABLE... tb_chat" />
+                <marker date="1513764597177" expanded="true" signature="2548:2780" ph="CREATE TABLE... tb_contato" />
+                <marker date="1513764597177" expanded="true" signature="2826:2936" ph="CREATE TABLE... tb_mensagem" />
+                <marker date="1513764597177" expanded="true" signature="2826:2947" ph="CREATE TABLE... tb_mensagem" />
+                <marker date="1513764597177" expanded="true" signature="2826:2968" ph="CREATE TABLE... tb_mensagem" />
+                <marker date="1513764597177" expanded="true" signature="2826:3007" ph="CREATE TABLE... tb_mensagem" />
+                <marker date="1513764597177" expanded="true" signature="3150:3204" ph="select nome,... tb_Usuario" />
+                <marker date="1513764597177" expanded="true" signature="3325:3389" ph="insert into tb_amizade... " />
+                <marker date="1513764597177" expanded="true" signature="3550:3599" ph="select nomeu... tb_contato" />
+                <marker date="1513764597177" expanded="true" signature="3962:4016" ph="Select * Fro... tb_Usuario" />
+                <marker date="1513764597177" expanded="true" signature="5558:5632" ph="select email... tb_mensagem" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioDAO" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/UsuarioDAO">
+      <file leaf-file-name="Menssagem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Menssagem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-              <folding>
-                <marker date="1513133765627" expanded="true" signature="177:341" ph="INSERT INTO tb.usuario... " />
-                <marker date="1513133765627" expanded="true" signature="557:581" ph="SELECT * FRO... usuario" />
-                <marker date="1513133765627" expanded="true" signature="1143:1198" ph="DELETE FROM " />
-                <marker date="1513133765627" expanded="true" signature="1460:1538" ph="UPDATE tb.us... " />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,6 +59,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Model/Menssagem.py" />
         <option value="$PROJECT_DIR$/App.py" />
       </list>
     </option>
@@ -172,7 +173,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -210,16 +211,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1513136626161" expanded="true" signature="1022:1291" ph="CREATE TABLE... usuario" />
-            <marker date="1513136626161" expanded="true" signature="1320:1681" ph="CREATE TABLE... publicacao" />
-            <marker date="1513136626161" expanded="true" signature="1710:2092" ph="CREATE TABLE... comentario" />
-            <marker date="1513136626161" expanded="true" signature="2123:2251" ph="CREATE TABLE... menssagem" />
-            <marker date="1513136626161" expanded="true" signature="2281:2410" ph="CREATE TABLE... chat" />
-            <marker date="1513136626161" expanded="true" signature="2444:2676" ph="CREATE TABLE... amigo" />
-            <marker date="1513136626161" expanded="true" signature="2810:2864" ph="select nome,... tb_Usuario" />
-            <marker date="1513136626161" expanded="true" signature="2985:3049" ph="insert into tb_amizade... " />
-            <marker date="1513136626161" expanded="true" signature="3187:3236" ph="select nomeu... tb_contato" />
-            <marker date="1513136626161" expanded="true" signature="3556:3610" ph="Select * Fro... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="1126:1395" ph="CREATE TABLE... tb_usuario" />
+            <marker date="1513764597177" expanded="true" signature="1424:1785" ph="CREATE TABLE... tb_publicacao" />
+            <marker date="1513764597177" expanded="true" signature="1814:2196" ph="CREATE TABLE... tb_comentario" />
+            <marker date="1513764597177" expanded="true" signature="2227:2355" ph="CREATE TABLE... tb_menssagem" />
+            <marker date="1513764597177" expanded="true" signature="2385:2514" ph="CREATE TABLE... tb_chat" />
+            <marker date="1513764597177" expanded="true" signature="2548:2780" ph="CREATE TABLE... tb_contato" />
+            <marker date="1513764597177" expanded="true" signature="2826:2936" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:2947" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:2968" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:3007" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="3150:3204" ph="select nome,... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="3325:3389" ph="insert into tb_amizade... " />
+            <marker date="1513764597177" expanded="true" signature="3550:3599" ph="select nomeu... tb_contato" />
+            <marker date="1513764597177" expanded="true" signature="3962:4016" ph="Select * Fro... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="5558:5632" ph="select email... tb_mensagem" />
           </folding>
         </state>
       </provider>
@@ -243,16 +249,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1513136626161" expanded="true" signature="1022:1291" ph="CREATE TABLE... usuario" />
-            <marker date="1513136626161" expanded="true" signature="1320:1681" ph="CREATE TABLE... publicacao" />
-            <marker date="1513136626161" expanded="true" signature="1710:2092" ph="CREATE TABLE... comentario" />
-            <marker date="1513136626161" expanded="true" signature="2123:2251" ph="CREATE TABLE... menssagem" />
-            <marker date="1513136626161" expanded="true" signature="2281:2410" ph="CREATE TABLE... chat" />
-            <marker date="1513136626161" expanded="true" signature="2444:2676" ph="CREATE TABLE... amigo" />
-            <marker date="1513136626161" expanded="true" signature="2810:2864" ph="select nome,... tb_Usuario" />
-            <marker date="1513136626161" expanded="true" signature="2985:3049" ph="insert into tb_amizade... " />
-            <marker date="1513136626161" expanded="true" signature="3187:3236" ph="select nomeu... tb_contato" />
-            <marker date="1513136626161" expanded="true" signature="3556:3610" ph="Select * Fro... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="1126:1395" ph="CREATE TABLE... tb_usuario" />
+            <marker date="1513764597177" expanded="true" signature="1424:1785" ph="CREATE TABLE... tb_publicacao" />
+            <marker date="1513764597177" expanded="true" signature="1814:2196" ph="CREATE TABLE... tb_comentario" />
+            <marker date="1513764597177" expanded="true" signature="2227:2355" ph="CREATE TABLE... tb_menssagem" />
+            <marker date="1513764597177" expanded="true" signature="2385:2514" ph="CREATE TABLE... tb_chat" />
+            <marker date="1513764597177" expanded="true" signature="2548:2780" ph="CREATE TABLE... tb_contato" />
+            <marker date="1513764597177" expanded="true" signature="2826:2936" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:2947" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:2968" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:3007" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="3150:3204" ph="select nome,... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="3325:3389" ph="insert into tb_amizade... " />
+            <marker date="1513764597177" expanded="true" signature="3550:3599" ph="select nomeu... tb_contato" />
+            <marker date="1513764597177" expanded="true" signature="3962:4016" ph="Select * Fro... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="5558:5632" ph="select email... tb_mensagem" />
           </folding>
         </state>
       </provider>
@@ -276,16 +287,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1513136626161" expanded="true" signature="1022:1291" ph="CREATE TABLE... usuario" />
-            <marker date="1513136626161" expanded="true" signature="1320:1681" ph="CREATE TABLE... publicacao" />
-            <marker date="1513136626161" expanded="true" signature="1710:2092" ph="CREATE TABLE... comentario" />
-            <marker date="1513136626161" expanded="true" signature="2123:2251" ph="CREATE TABLE... menssagem" />
-            <marker date="1513136626161" expanded="true" signature="2281:2410" ph="CREATE TABLE... chat" />
-            <marker date="1513136626161" expanded="true" signature="2444:2676" ph="CREATE TABLE... amigo" />
-            <marker date="1513136626161" expanded="true" signature="2810:2864" ph="select nome,... tb_Usuario" />
-            <marker date="1513136626161" expanded="true" signature="2985:3049" ph="insert into tb_amizade... " />
-            <marker date="1513136626161" expanded="true" signature="3187:3236" ph="select nomeu... tb_contato" />
-            <marker date="1513136626161" expanded="true" signature="3556:3610" ph="Select * Fro... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="1126:1395" ph="CREATE TABLE... tb_usuario" />
+            <marker date="1513764597177" expanded="true" signature="1424:1785" ph="CREATE TABLE... tb_publicacao" />
+            <marker date="1513764597177" expanded="true" signature="1814:2196" ph="CREATE TABLE... tb_comentario" />
+            <marker date="1513764597177" expanded="true" signature="2227:2355" ph="CREATE TABLE... tb_menssagem" />
+            <marker date="1513764597177" expanded="true" signature="2385:2514" ph="CREATE TABLE... tb_chat" />
+            <marker date="1513764597177" expanded="true" signature="2548:2780" ph="CREATE TABLE... tb_contato" />
+            <marker date="1513764597177" expanded="true" signature="2826:2936" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:2947" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:2968" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:3007" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="3150:3204" ph="select nome,... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="3325:3389" ph="insert into tb_amizade... " />
+            <marker date="1513764597177" expanded="true" signature="3550:3599" ph="select nomeu... tb_contato" />
+            <marker date="1513764597177" expanded="true" signature="3962:4016" ph="Select * Fro... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="5558:5632" ph="select email... tb_mensagem" />
           </folding>
         </state>
       </provider>
@@ -338,22 +354,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Menssagem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="175" column="16" lean-forward="false" selection-start-line="175" selection-start-column="16" selection-end-line="176" selection-end-column="32" />
+        <state relative-caret-position="379">
+          <caret line="182" column="13" lean-forward="true" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1513136626161" expanded="true" signature="1022:1291" ph="CREATE TABLE... usuario" />
-            <marker date="1513136626161" expanded="true" signature="1320:1681" ph="CREATE TABLE... publicacao" />
-            <marker date="1513136626161" expanded="true" signature="1710:2092" ph="CREATE TABLE... comentario" />
-            <marker date="1513136626161" expanded="true" signature="2123:2251" ph="CREATE TABLE... menssagem" />
-            <marker date="1513136626161" expanded="true" signature="2281:2410" ph="CREATE TABLE... chat" />
-            <marker date="1513136626161" expanded="true" signature="2444:2676" ph="CREATE TABLE... amigo" />
-            <marker date="1513136626161" expanded="true" signature="2810:2864" ph="select nome,... tb_Usuario" />
-            <marker date="1513136626161" expanded="true" signature="2985:3049" ph="insert into tb_amizade... " />
-            <marker date="1513136626161" expanded="true" signature="3187:3236" ph="select nomeu... tb_contato" />
-            <marker date="1513136626161" expanded="true" signature="3556:3610" ph="Select * Fro... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="1126:1395" ph="CREATE TABLE... tb_usuario" />
+            <marker date="1513764597177" expanded="true" signature="1424:1785" ph="CREATE TABLE... tb_publicacao" />
+            <marker date="1513764597177" expanded="true" signature="1814:2196" ph="CREATE TABLE... tb_comentario" />
+            <marker date="1513764597177" expanded="true" signature="2227:2355" ph="CREATE TABLE... tb_menssagem" />
+            <marker date="1513764597177" expanded="true" signature="2385:2514" ph="CREATE TABLE... tb_chat" />
+            <marker date="1513764597177" expanded="true" signature="2548:2780" ph="CREATE TABLE... tb_contato" />
+            <marker date="1513764597177" expanded="true" signature="2826:2936" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:2947" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:2968" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="2826:3007" ph="CREATE TABLE... tb_mensagem" />
+            <marker date="1513764597177" expanded="true" signature="3150:3204" ph="select nome,... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="3325:3389" ph="insert into tb_amizade... " />
+            <marker date="1513764597177" expanded="true" signature="3550:3599" ph="select nomeu... tb_contato" />
+            <marker date="1513764597177" expanded="true" signature="3962:4016" ph="Select * Fro... tb_Usuario" />
+            <marker date="1513764597177" expanded="true" signature="5558:5632" ph="select email... tb_mensagem" />
           </folding>
         </state>
       </provider>
