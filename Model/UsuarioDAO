@@ -1,4 +1,5 @@
 from Usuario import Usuario
+import mysql.connect
 try:
     # conectando ao banco :3
     conn = mysql.connector.connect(user='root',
