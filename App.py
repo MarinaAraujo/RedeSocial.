@@ -197,8 +197,8 @@ def menu2 ():
 
 #criando o menu
 def menuzinho():
-     print('========================================================================================================================')
-    print('bem vindo')
+     print('====================================================(   NOVACON   )==========================================================')
+    print('bem vindo!')
     menu1=input('o que gostaria de fazer agora? \n 1-criar rede social\n 2-Realizar LogIn \n 3-Cadastrar um novo usuário\n 0-Sair' )
     
          continuar = True
