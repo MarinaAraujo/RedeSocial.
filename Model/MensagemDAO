@@ -1,15 +1,18 @@
 from Mensagem import Mensagem
-def inserir():
-        conn = sqlite3.connect("novacon.db")
+
+class MensagemDAO()
+
+def __init__(self)
+
+     def inserir(self):
         cursor= conn.cursor()
         cursor.execute("""
             INSERT INTO tb.mensagem (idRemetente, coments)
             VALUES (self.idRemetente, self.coments)
             """)
 
-    def listar():
+    def listar(self):
         mensagens = []
-        conn = sqlite3.connect("novacon.db")
         cursor = conn.cursor()
         cursor.execute("""SELECT * FROM tb.mensagem """, (tb.mensagem))
 
@@ -23,7 +26,6 @@ def inserir():
 
     def deletar(self, id):
         novo_id = 3
-        conn = sqlite3.connect("novacon.db")
         cursor = conn.cursor()
         cursor.execute("""
                 DELETE FROM tb.mensagem
@@ -32,7 +34,6 @@ def inserir():
         conn.close()
 
     def atualizar(self, idRemetente, coments):
-        conn = sqlite3.connect("novacon.db")
         cursor = conn.cursor()
         cursor.execute("""UPDATE tb.mensagem
             SET * VALUES(?,?,?,?,?,?,?)
