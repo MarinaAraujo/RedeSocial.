@@ -175,20 +175,25 @@ def enviarMensagem()
     MensagemDAO.inserir(m)
 
 def menu2 ():
-    menuzinho2=input('o que desseja fazer agora?')
-    print('0-sair\n1-ver amigos\n 2-adicionar amigos\n3-ler as mensagens recebidas\n 3-enviar mensagem')
-    if menuzinho2 ==1:
-        listarcontatos()
-    elif menuzinho2==2:
-        addcontato()
-    elif menuzinho2 ==3:
-        pass
-    elif menuzinho2 == 4:
-        pass
-    elif menuzinho2 == 0 :
-        break
-    else:
-        print('digite um valor valido')
+     continuar = True
+
+    while continuar:
+ 
+        try:
+            menuzinho2=input('o que desseja fazer agora?')
+            print('0-sair\n1-ver amigos\n 2-adicionar amigos\n3-ler as mensagens recebidas\n 3-enviar mensagem')
+            if menuzinho2 ==1:
+                listarcontatos()
+            elif menuzinho2==2:
+                addcontato()
+            elif menuzinho2 ==3:
+                LerMensagens()
+            elif menuzinho2 == 4:
+                enviarMensagem()
+            elif menuzinho2 == 0 :
+                break
+        except ValueError:
+            print("Digite um valor válido")
 
 #criando o menu
 def menuzinho():
