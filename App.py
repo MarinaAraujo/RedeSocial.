@@ -114,7 +114,6 @@ def listarcontatos():
 #executando login do usuario
 def logIn():
     print('========================================================================================================================')
-   def logar(conn):
     cursor = conn.cursor()
 
     email = input("Digite seu email:\n ")
