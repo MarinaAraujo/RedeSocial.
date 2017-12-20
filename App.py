@@ -163,8 +163,8 @@ def signUp():
 
 def LerMensagens():
     cursor=conn.cursor()
-    cursor.execute(("""select email_remetende,texto from tb_mensagem where email_destinatario = ?
-    """)userfeed.email)
+    cursor.execute("""select email_remetende,texto from tb_mensagem where email_destinatario = ?
+    """,(userfeed.email))
     print(cursor)
     conn.close
 
@@ -173,6 +173,13 @@ def enviarMensagem()
     m.email=input("digite o email do destinatário da mensagem")
     m.texto=input("digite a mensagem a ser enviada")
     MensagemDAO.inserir(m)
+    
+def ExcluirContato(): 
+    delEmail=input("Digite o email do usuário a ser deletado")
+    cursor=conn.cursor()
+    cursor.execute(""" DELETE FROM tb_Contatos
+    WHERE email=?
+    """,(delEmail))
 
 def menu2 ():
      continuar = True
@@ -181,7 +188,7 @@ def menu2 ():
  
         try:
             menuzinho2=input('o que desseja fazer agora?')
-            print('0-sair\n1-ver amigos\n 2-adicionar amigos\n3-ler as mensagens recebidas\n 3-enviar mensagem')
+            print('0-sair\n1-ver amigos\n 2-adicionar amigos\n3-ler as mensagens recebidas\n 4-enviar mensagem\n5-excluir contato')
             if menuzinho2 ==1:
                 listarcontatos()
             elif menuzinho2==2:
@@ -190,6 +197,8 @@ def menu2 ():
                 LerMensagens()
             elif menuzinho2 == 4:
                 enviarMensagem()
+            elif menuzinho2 ==5:
+                ExcluirContato()
             elif menuzinho2 == 0 :
                 break
         except ValueError:
