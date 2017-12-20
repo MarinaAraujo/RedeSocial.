@@ -1,5 +1,18 @@
 from Mensagem import Mensagem
 
+try:
+    # conectando ao banco :3
+    conn = mysql.connector.connect(user='root',
+                              password='ifpbinfo',
+                              host='127.0.0.1',
+                              database='Novacondb')
+
+except mysql.connector.Error as err:
+    print("erro na base de dados")
+else:
+    # encerrando conexão por precaução
+    conn.close()
+
 class MensagemDAO()
 
 def __init__(self)
