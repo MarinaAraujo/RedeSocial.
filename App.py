@@ -71,12 +71,6 @@ def criarRedeSocial():
         nSad INTEGER NOT NULL
     ); """)
 
-    cursor.execute(""" CREATE TABLE tb_menssagem(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        idRemetente INTEGER,
-        coments TEXT
-    );""")
-
     cursor.execute(""" CREATE TABLE tb_chat(
         idUsuario INTEGER PRIMARY KEY AUTOINCREMENT,
         idRemetente INTEGER,
