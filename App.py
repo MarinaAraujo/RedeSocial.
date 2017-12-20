@@ -25,14 +25,15 @@ else:
     conn.close()
 
 
-
+#função para criar a rede social
 def criarRedeSocial():
     nome = str(input("Digite um nome da Rede Social: "))
     redeSocial = RedeSocial(nome)
     idRedeSocial = redeSocial.inserirRedeSocial(redeSocial)
     
         cursor= conn.cursor()
-
+        
+        #criando tabelas do banco de dados
     cursor.execute(""" CREATE TABLE tb_usuario(
         codigo INTEGER PRIMARY KEY AUTOINCREMENT,
         nome VARCHAR(50) NOT NULL,
@@ -90,6 +91,7 @@ def criarRedeSocial():
     );""")
     conn.close()
 
+    # adicionando contatos
 def addcontato():
     pesq=input('digite o nome do amigo que procura')
     print(cursor = conn.cursor("""
@@ -101,12 +103,13 @@ def addcontato():
     """)
     conn.close()
 
+    #listando contatos
 def listarcontatos():
     cursor=conn.cursor()
     for i in cursor.fetchall:
         print(cursor.execute(""" select nomeuser2 from tb_contato where codigo = ?""")i)
 
-
+#executando login do usuario
 def logIn():
     print('========================================================================================================================')
    def logar(conn):
@@ -126,13 +129,14 @@ def logIn():
     else:
         userfeed=usuario
         return (True, usuario)
-
+    
+# checando se o email realmente é valido
 def validarEmail(email):
     if ((email.find('@')>0) and(len(email)>9)):
         return(1)
     else:
         return(0)
-
+#fução para cadastar um novo usuario
 def signIn():
     print('========================================================================================================================')
     NovoUsuario = Usuario('','',0,0,0,'')
@@ -154,7 +158,8 @@ def signIn():
     NovoUsuario.telefone = input('Digite seu Telefone')
     NovoUsuario.profissao = input('Digite sua profissão')
     UsuarioDAO.inserir()
-
+    
+#criando o menu
 def menuzinho():
      print('========================================================================================================================')
     print('bem vindo')
