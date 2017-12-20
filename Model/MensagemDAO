@@ -1,4 +1,5 @@
 from Mensagem import Mensagem
+import mysql.connect
 
 try:
     # conectando ao banco :3
